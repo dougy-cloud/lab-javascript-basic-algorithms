@@ -70,7 +70,9 @@ b. Make your program count the number of times the Latin word [`et`](https://en.
 
 // a.
 
-let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae bibendum felis. Sed porta eros mauris, non pharetra dolor accumsan laoreet. Nullam nec ullamcorper diam, at lacinia arcu. Cras pellentesque volutpat hendrerit. Praesent tempus malesuada iaculis. Cras ac velit varius, volutpat dui sit amet, gravida leo. Sed porta neque ac convallis fermentum. Phasellus vel varius nunc. Integer suscipit augue vitae eros condimentum feugiat."
+let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae bibendum felis. Sed porta eros mauris, non pharetra dolor accumsan laoreet. Nullam nec ullamcorper diam, at lacinia arcu. Cras pellentesque volutpat hendrerit. Praesent tempus malesuada iaculis. Cras ac velit varius, volutpat dui sit amet, gravida leo. Sed porta neque ac convallis fermentum. Phasellus vel varius nunc. Integer suscipit augue vitae eros condimentum feugiat. "
+
+// my original code
 
 let count = 0
 for (let j = 0; j < text.length; j++){
@@ -81,7 +83,17 @@ for (let j = 0; j < text.length; j++){
 console.log(count) // it returns 1... my logic there was : iterate as long as the length of text is and count +1 when j encouters a blank space because that would be a word. but i think i'm missing something.
 
 
-// b.
+// my code corrected by suraina
+
+let count = 0
+for (let j = 0; j < text.length; j++){
+  if (text[j] === " "){
+    count+=1;
+  }
+}
+console.log(count) // i want to make sure to understand where i did wrong, so could a TA explain to me in plain english what is the difference between if (text[j] === " ") and if (j === " ") ? thank you!
+
+/* b.
 let count2 = 0
 for (let a = 0; a < text.length; a++){
   const char1 = text.length[a];
@@ -92,3 +104,4 @@ for (let a = 0; a < text.length; a++){
 }
 console.log(count) // it also returns 1 xD i think it's the char parts i've got wrong
 
+*/
